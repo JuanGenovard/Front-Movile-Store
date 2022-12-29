@@ -7,15 +7,28 @@ import './Home.scss';
 
 function Home() {
   return (
-    <div className="container-fluid">
+    <div className="cont container-fluid">
       <div className="row">
         <div className="col titulocol d-flex justify-content-center align-items-center">
           <p>MobileStore</p>
         </div>
       </div>
       <div class="row g-0 text-center">
-        <div class="col-sm-6 col-md-8 coltext">.col-sm-6 .col-md-8</div>
-        <div class="col-6 col-md-4 colbotons">.col-6 .col-md-4</div>
+        <div class="col-sm-6 col-md-6 coltext d-flex justify-content-center align-items-center">
+          <div className='divtext1 d-flex justify-content-center align-items-center text'>
+              ¡Estás en Movile Store,<br />
+              la mejor web dedicada al<br />
+              reacondicionado!
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 coltext d-flex flex-column justify-content-center align-items-center colbotons">
+          <div className='divtext2 d-flex justify-content-center align-items-center'>
+            <a>LOGIN</a>
+          </div>
+          <div className='divtext2 d-flex justify-content-center align-items-center'>
+            <a>REGISTER</a>
+          </div>
+        </div>
       </div>
 
     </div>

@@ -1,7 +1,4 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import './Home.scss';
 
 
@@ -17,11 +14,9 @@ function Home() {
       <div class="row g-0 text-center">
         <div class="col-sm-6 col-md-6 coltext d-flex justify-content-center align-items-center">
           <div className='divtext1 d-flex justify-content-center align-items-center text'>
-
-              ¡Estás en MovileStore,<br />
-              la mejor web dedicada al<br />
-              reacondicionado!
-
+            ¡Estás en MovileStore,<br />
+            la mejor web dedicada al<br />
+            reacondicionado!
           </div>
         </div>
         <div class="col-sm-6 col-md-6 coltext d-flex flex-column justify-content-center align-items-center colbotons">
@@ -33,8 +28,18 @@ function Home() {
           </div>
         </div>
       </div>
-
+      <div className='cont2 container-fluid'>
+        <div className='row'>
+          <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
+            <img src="../../img/barco-en-el-mar-dentro-de-una-botella_3840x2400_xtrafondos.com.jpg" alt="imagen" />
+          </div>
+          <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
+            hola
+            </div>
+        </div>
+      </div>
     </div>
+
   )
 }
 

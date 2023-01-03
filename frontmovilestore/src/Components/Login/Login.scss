@@ -19,7 +19,7 @@ $color-white: #FFF;
 }
 
 .words {
-    color: wheat;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +47,7 @@ $color-white: #FFF;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 600;
+    margin: 10px;
 }
 
 

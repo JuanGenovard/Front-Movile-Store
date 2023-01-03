@@ -54,7 +54,7 @@ const Register = () => {
         } else {
             console.log("submited form")
             e.preventDefault()
-             axios.post("https://proyectobackendpeliculas-production.up.railway.app/auth/register",form)
+             axios.post("http://localhost:3001/auth/register",form)
             .then(response=>{
               console.log(response);
               if (response) {
@@ -63,7 +63,7 @@ const Register = () => {
                     email:form.email,
                     password:form.password
                 }
-                axios.post("https://proyectobackendpeliculas-production.up.railway.app/auth/login", body)
+                axios.post("http://localhost:3001/auth/register", body)
                 .then(response => {
                         localStorage.setItem('jwt', JSON.stringify(response.data.jwt));
                         localStorage.setItem('username', response.data.username);
@@ -108,21 +108,6 @@ const Register = () => {
                 </Form.Control>
                 <Form.Control.Feedback type='invalid'>
                     {errors.email}
-                </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group controlId='dob'>
-                <Form.Label className='words'>Date of Birth</Form.Label>
-                <Form.Control
-                    type='date'
-                    placeholder='Enter date of birth'
-                    value={form.dob}
-                    onChange={(e) => setField('dob', e.target.value)}
-                    isInvalid={!!errors.dob}
-                    className='input'
-                >
-                </Form.Control>
-                <Form.Control.Feedback type='invalid'>
-                    {errors.dob}
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId='password' className='password'>

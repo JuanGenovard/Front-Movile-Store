@@ -49,11 +49,11 @@ const Login = () => {
             console.log(formErrors);
         }
         else{
-            axios.post("https://proyectobackendpeliculas-production.up.railway.app/auth/login", form)
+            console.log(form)
+            axios.post("http://localhost:3001/auth/login", form)
             .then(response => {
+                console.log(response)
                 localStorage.setItem('jwt', response.data.jwt);
-                localStorage.setItem('username', response.data.username);
-                localStorage.setItem('isAdmin', response.data.admin);
                 changeLogin(response.data.username, response.data.admin);
                 navigate("/movies");
             }).catch(error => {

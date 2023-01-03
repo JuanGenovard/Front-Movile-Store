@@ -21,10 +21,10 @@ function Home() {
         </div>
         <div class="col-sm-6 col-md-6 coltext d-flex flex-column justify-content-center align-items-center colbotons">
           <div className='divtext2 d-flex justify-content-center align-items-center'>
-            <a>LOGIN</a>
+            <a href='/login'>LOGIN</a>
           </div>
           <div className='divtext2 d-flex justify-content-center align-items-center'>
-            <a>REGISTER</a>
+            <a href='/register'>REGISTER</a>
           </div>
         </div>
       </div>

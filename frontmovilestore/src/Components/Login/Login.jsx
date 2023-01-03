@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import "./Login.scss"
+import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import axios from "axios";
-import './Login.scss';
-
+import { useNavigate } from "react-router-dom";
+import { useUserToggleContext } from "../../UserProvider";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -49,7 +49,7 @@ const Login = () => {
             console.log(formErrors);
         }
         else{
-            axios.post("https://localhost:3001/", form)
+            axios.post("https://proyectobackendpeliculas-production.up.railway.app/auth/login", form)
             .then(response => {
                 localStorage.setItem('jwt', response.data.jwt);
                 localStorage.setItem('username', response.data.username);
@@ -64,6 +64,7 @@ const Login = () => {
     }
 
     return (
+        <div className="contform">
         <Form className="containerform">
             <Form.Group controlId='email'>
                 <Form.Label className="words">Email</Form.Label>
@@ -112,6 +113,7 @@ const Login = () => {
 
             </Form.Group>
         </Form>
+        </div>
     );
 }
 export default Login;

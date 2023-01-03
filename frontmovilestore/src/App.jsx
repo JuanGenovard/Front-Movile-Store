@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Home from './Containers/Home/Home';
 import Login from './Containers/LoginContainer/LoginContainer';
+import Register from './Components/Register/Register';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/login' element={<Login/>}/>
+                <Route path='/register' element={<Register/>}/>
             </Routes>
             </BrowserRouter>
         

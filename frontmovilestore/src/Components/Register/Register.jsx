@@ -63,10 +63,11 @@ const Register = () => {
                 console.log("Intentando login");
                 const body ={
                     email:form.email,
-                    contraseña:form.password
+                    contraseña:form.contraseña,
+                    nombre:form.nombre
                 }
                 console.log(body)
-                axios.post("http://localhost:3001/auth/nuevousuario", body)
+                axios.post("http://localhost:3001/auth/login", body)
                 .then(response => {
                         localStorage.setItem('jwt', JSON.stringify(response.data.jwt));
                         localStorage.setItem('username', response.data.username);
@@ -87,8 +88,8 @@ const Register = () => {
                 <Form.Label className='words'>Username</Form.Label>
                 <Form.Control
                     placeholder='Enter username'
-                    value={form.username}
-                    onChange={(e) => setField('username', e.target.value)}
+                    value={form.nombre}
+                    onChange={(e) => setField('nombre', e.target.value)}
                     isInvalid={!!errors.username}
                     className='input'
                 >
@@ -119,8 +120,8 @@ const Register = () => {
                 <Form.Control
                     type='password'
                     placeholder='Enter your password'
-                    value={form.password}
-                    onChange={(e) => setField('password', e.target.value)}
+                    value={form.contraseña}
+                    onChange={(e) => setField('contraseña', e.target.value)}
                     isInvalid={!!errors.password}
                     className='input'
                 >

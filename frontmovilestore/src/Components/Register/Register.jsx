@@ -24,14 +24,14 @@ const Register = () => {
     }
 
     const validateForm = () => {
-        const { username, email, dob, password, password2 } = form;
+        const { username, email, password, password2 } = form;
         const newErrors = {};
         
         if (!username || username === 'Enter username') newErrors.username = 'Please enter a username'
         if (!email || email === 'Enter email'){
             newErrors.email = 'Please enter an email'
         } else if (!/.+\@.+\..+/.test(email)) newErrors.email = 'Please input a valid email'
-        if (!dob || dob === '') newErrors.dob = 'Please enter your date of birth'
+        // if (!dob || dob === '') newErrors.dob = 'Please enter your date of birth'
         if (!password || password === 'Enter your password') newErrors.password= 'Please enter a password'
         else {
             if (!/[?=.*[0-9]]*/.test(password)) newErrors.password = 'Password must contain a number'
@@ -51,19 +51,22 @@ const Register = () => {
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
+            console.log(formErrors);
         } else {
             console.log("submited form")
             e.preventDefault()
-             axios.post("http://localhost:3001/auth/register",form)
+            console.log(form);
+             axios.post("http://localhost:3001/auth/nuevousuario",form)
             .then(response=>{
               console.log(response);
               if (response) {
                 console.log("Intentando login");
                 const body ={
                     email:form.email,
-                    password:form.password
+                    contraseña:form.password
                 }
-                axios.post("http://localhost:3001/auth/register", body)
+                console.log(body)
+                axios.post("http://localhost:3001/auth/nuevousuario", body)
                 .then(response => {
                         localStorage.setItem('jwt', JSON.stringify(response.data.jwt));
                         localStorage.setItem('username', response.data.username);
@@ -128,7 +131,7 @@ const Register = () => {
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId='password2'>
-                <Form.Label className='words'>Password</Form.Label>
+                <Form.Label className='words'>Repeat Password</Form.Label>
                 <Form.Control
                     type='password'
                     placeholder='Repeat your password'

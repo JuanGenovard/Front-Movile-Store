@@ -24,24 +24,24 @@ const Register = () => {
     }
 
     const validateForm = () => {
-        const { username, email, password, password2 } = form;
+        const { nombre, email, contraseña, contraseña2 } = form;
         const newErrors = {};
         
-        if (!username || username === 'Enter username') newErrors.username = 'Please enter a username'
+        if (!nombre || nombre === 'Enter nombre') newErrors.nombre = 'Please enter a nombre'
         if (!email || email === 'Enter email'){
             newErrors.email = 'Please enter an email'
         } else if (!/.+\@.+\..+/.test(email)) newErrors.email = 'Please input a valid email'
         // if (!dob || dob === '') newErrors.dob = 'Please enter your date of birth'
-        if (!password || password === 'Enter your password') newErrors.password= 'Please enter a password'
+        if (!contraseña || contraseña === 'Enter your contraseña') newErrors.contraseña= 'Please enter a contraseña'
         else {
-            if (!/[?=.*[0-9]]*/.test(password)) newErrors.password = 'Password must contain a number'
-            if (!/[?=.*[a-z]]*/.test(password)) newErrors.password = 'Password must contain at least 1 lower case'
-            if (!/[?=.*[A-Z]]*/.test(password)) newErrors.password = 'Password must contain at least 1 upper case'
-            if (!/[[a-zA-Z0-9]{8,}]*/.test(password)) newErrors.password = 'Password must contain at least 8 characters'
+            if (!/[?=.*[0-9]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain a number'
+            if (!/[?=.*[a-z]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 1 lower case'
+            if (!/[?=.*[A-Z]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 1 upper case'
+            if (!/[[a-zA-Z0-9]{8,}]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 8 characters'
         }
 
-        if (!password2 || password2 === 'Repeat your password') newErrors.password2 = 'Please repeat your password'
-        else if (password2 !== password) newErrors.password2 = 'The passwords do not match'
+        if (!contraseña2 || contraseña2 === 'Repeat your contraseña') newErrors.contraseña2 = 'Please repeat your contraseña'
+        else if (contraseña2 !== contraseña) newErrors.contraseña2 = 'The contraseñas do not match'
 
         return newErrors;
     }
@@ -56,6 +56,8 @@ const Register = () => {
             console.log("submited form")
             e.preventDefault()
             console.log(form);
+            let registerbody = JSON.stringify(form)
+            console.log(registerbody)
              axios.post("http://localhost:3001/auth/nuevousuario",form)
             .then(response=>{
               console.log(response);
@@ -70,9 +72,9 @@ const Register = () => {
                 axios.post("http://localhost:3001/auth/login", body)
                 .then(response => {
                         localStorage.setItem('jwt', JSON.stringify(response.data.jwt));
-                        localStorage.setItem('username', response.data.username);
+                        localStorage.setItem('nombre', response.data.nombre);
                         localStorage.setItem('isAdmin', response.data.admin);
-                        changeLogin(response.data.username,response.data.admin);
+                        changeLogin(response.data.nombre,response.data.admin);
                         navigate("/");
                 });
             }
@@ -84,18 +86,18 @@ const Register = () => {
     return (
         <div className='contform'>
         <Form className='Principal1'>
-            <Form.Group controlId='username'>
-                <Form.Label className='words'>Username</Form.Label>
+            <Form.Group controlId='nombre'>
+                <Form.Label className='words'>nombre</Form.Label>
                 <Form.Control
-                    placeholder='Enter username'
+                    placeholder='Enter nombre'
                     value={form.nombre}
                     onChange={(e) => setField('nombre', e.target.value)}
-                    isInvalid={!!errors.username}
+                    isInvalid={!!errors.nombre}
                     className='input'
                 >
                 </Form.Control>
                 <Form.Control.Feedback type='invalid'>
-                    {errors.username}
+                    {errors.nombre}
 
                 </Form.Control.Feedback>
             </Form.Group>
@@ -114,36 +116,36 @@ const Register = () => {
                     {errors.email}
                 </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group controlId='password' className='password'>
-            <Form.Label className='words'>Password</Form.Label>
+            <Form.Group controlId='contraseña' className='contraseña'>
+            <Form.Label className='words'>contraseña</Form.Label>
 
                 <Form.Control
                     type='password'
-                    placeholder='Enter your password'
+                    placeholder='Enter your contraseña'
                     value={form.contraseña}
                     onChange={(e) => setField('contraseña', e.target.value)}
-                    isInvalid={!!errors.password}
+                    isInvalid={!!errors.contraseña}
                     className='input'
                 >
                 </Form.Control>
                 <Form.Control.Feedback type='invalid'>
-                    {errors.password};
+                    {errors.contraseña};
 
                 </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group controlId='password2'>
-                <Form.Label className='words'>Repeat Password</Form.Label>
+            <Form.Group controlId='contraseña2'>
+                <Form.Label className='words'>Repeat contraseña</Form.Label>
                 <Form.Control
                     type='password'
-                    placeholder='Repeat your password'
-                    value={form.password2}
-                    onChange={(e) => setField('password2', e.target.value)}
-                    isInvalid={!!errors.password2}
+                    placeholder='Repeat your contraseña'
+                    value={form.contraseña2}
+                    onChange={(e) => setField('contraseña2', e.target.value)}
+                    isInvalid={!!errors.contraseña2}
                     className='input'
                 >
                 </Form.Control>
                 <Form.Control.Feedback type='invalid'>
-                    {errors.password2}
+                    {errors.contraseña2}
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group controlId='submit'>

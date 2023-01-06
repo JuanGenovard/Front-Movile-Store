@@ -27,7 +27,7 @@
     height: 80vh;
     width: 40vw;
     margin: 5px;
-    border-radius: 20px
+    border-radius: 20px;
 }
 .divtext2{
     height: 5vh;
@@ -36,12 +36,21 @@
     margin: 5px;
 }
 .cont2{
-    background-color: aqua;
+    background-color: white;
     height: 50vh;
+    border: solid 1px black;
+    border-radius: 20px;
+    margin: 50px;
+
 }
 
 .imagenes{
     width: 30vw;
-    height: 30vh;
+    height: 40vh;
+    margin: 50px;
+}
+.imagenes2{
+    width: 25vw;
+    height: 40vh;
     margin: 50px;
 }

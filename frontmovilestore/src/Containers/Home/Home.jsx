@@ -32,7 +32,7 @@ function Home() {
       <div className='cont2 container-fluid'>
         <div className='row'>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-          <img src="../../Resouces/368828.jpg" alt="imagen" />
+          <img className='imagenes' src={logo} alt="imagen" />
           </div>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
             hola

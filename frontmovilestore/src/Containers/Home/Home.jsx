@@ -33,38 +33,38 @@ function Home() {
       <div className='cont2 container-fluid'>
         <div className='row'>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-          <img className='imagenes' src={logo} alt="imagen" />
+            <img className='imagenes' src={logo} alt="imagen" />
           </div>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-           <h4> En nuestra MovilStore encontraras <br/>
-             una gran variedad de moviles de <br/>
+            <h4> En nuestra MovilStore encontraras <br />
+              una gran variedad de moviles de <br />
               alta gama a un precio increible</h4>
-            </div>
+          </div>
         </div>
       </div>
       <div className='cont2 container-fluid'>
         <div className='row'>
 
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-           <h4> En nuestra MovilStore encontraras <br/>
-             una gran variedad de moviles de <br/>
+            <h4> En nuestra MovilStore encontraras <br />
+              una gran variedad de moviles de <br />
               alta gama a un precio increible</h4>
-            </div>
-            <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-          <img className='imagenes2' src={logo2} alt="imagen" />
+          </div>
+          <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
+            <img className='imagenes2' src={logo2} alt="imagen" />
           </div>
         </div>
       </div>
       <div className='cont2 container-fluid'>
         <div className='row'>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-          <img className='imagenes' src={logo} alt="imagen" />
+            <img className='imagenes' src={logo} alt="imagen" />
           </div>
           <div className='col-sm-6 col-md-6 d-flex justify-content-center align-items-center'>
-           <h4> En nuestra MovilStore encontraras <br/>
-             una gran variedad de moviles de <br/>
+            <h4> En nuestra MovilStore encontraras <br />
+              una gran variedad de moviles de <br />
               alta gama a un precio increible</h4>
-            </div>
+          </div>
         </div>
       </div>
     </div>

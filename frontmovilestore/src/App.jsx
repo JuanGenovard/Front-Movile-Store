@@ -9,6 +9,7 @@ import Home from './Containers/Home/Home';
 import Login from './Containers/LoginContainer/LoginContainer';
 import Register from './Components/Register/Register';
 import Movil from './Containers/Movil/Movil';
+import SettingsUser from './Containers/SettingsContainer/SettingsContainer';
 
 
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>
                 <Route path='/movil' element={<Movil/>}/>
+                <Route path ='/settings' element={<SettingsUser/>}/>
             </Routes>
             </BrowserRouter>
         

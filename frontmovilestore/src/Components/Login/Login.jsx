@@ -118,6 +118,14 @@ const Login = () => {
 
                 </Form.Group>
             </Form>
+            <div className=" coltext d-flex flex-column justify-content-center align-items-center colbotons">
+                <div className='botonhome d-flex justify-content-center align-items-center'>
+                    <a href='/'>HOME</a>
+                </div>
+                <div className='botonhome d-flex justify-content-center align-items-center'>
+                    <a href='/movil'>MOVIL</a>
+                </div>
+            </div>
         </div>
     );
 }

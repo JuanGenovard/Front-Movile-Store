@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../Resouces/movil1.webp'
 import './Home.scss'
 import logo2 from '../../Resouces/mujer-con-movil.webp'
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -23,10 +24,10 @@ function Home() {
         </div>
         <div className="col-sm-6 col-md-6 coltext d-flex flex-column justify-content-center align-items-center colbotons">
           <div className='divtext2 d-flex justify-content-center align-items-center'>
-            <a href='/login'>LOGIN</a>
+            <Link to='/login'>LOGIN</Link>
           </div>
           <div className='divtext2 d-flex justify-content-center align-items-center'>
-            <a href='/register'>REGISTER</a>
+            <Link to='/register'>REGISTER</Link>
           </div>
         </div>
       </div>

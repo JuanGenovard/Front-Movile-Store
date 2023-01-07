@@ -4,6 +4,8 @@ import './Register.scss'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUserToggleContext } from "../../UserProvider";
+import Header from '../Header/Header';
+
 
 const Register = () => {
     const [form, setForm] = useState({});
@@ -60,110 +62,89 @@ const Register = () => {
             console.log(registerbody)
             axios.post("http://localhost:3001/auth/nuevousuario", form)
                 .then(response => {
-                    console.log(response);
-                    if (response) {
-                        console.log("Intentando login");
-                        const body = {
-                            email: form.email,
-                            contraseña: form.contraseña,
-                            nombre: form.nombre
-                        }
-                        console.log(body)
-                        axios.post("http://localhost:3001/auth/login", body)
-                            .then(response => {
-                                localStorage.setItem('jwt', JSON.stringify(response.data.jwt));
-                                localStorage.setItem('nombre', response.data.nombre);
-                                localStorage.setItem('isAdmin', response.data.admin);
-                                changeLogin(response.data.nombre, response.data.admin);
-                                navigate("/");
-                            });
-                    }
+                    navigate("/login")
                 });
 
         }
     }
 
     return (
-        <div className='contform'>
-            <Form className='Principal1'>
-                <Form.Group controlId='nombre'>
-                    <Form.Label className='words'>nombre</Form.Label>
-                    <Form.Control
-                        placeholder='Enter username'
-                        value={form.nombre}
-                        onChange={(e) => setField('nombre', e.target.value)}
-                        isInvalid={!!errors.nombre}
-                        className='input'
-                    >
-                    </Form.Control>
-                    <Form.Control.Feedback type='invalid'>
-                        {errors.nombre}
+        <>
+            <Header />
+            <div className='contform'>
 
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group controlId='email'>
-                    <Form.Label className='words'>Email</Form.Label>
-                    <Form.Control
-                        type='email'
-                        placeholder='Enter email'
-                        value={form.email}
-                        onChange={(e) => setField('email', e.target.value)}
-                        isInvalid={!!errors.email}
-                        className='input'
-                    >
-                    </Form.Control>
-                    <Form.Control.Feedback type='invalid'>
-                        {errors.email}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group controlId='contraseña' className='contraseña'>
-                    <Form.Label className='words'>contraseña</Form.Label>
+                <Form className='Principal1'>
+                    <Form.Group controlId='nombre'>
+                        <Form.Label className='words'>nombre</Form.Label>
+                        <Form.Control
+                            placeholder='Enter username'
+                            value={form.nombre}
+                            onChange={(e) => setField('nombre', e.target.value)}
+                            isInvalid={!!errors.nombre}
+                            className='input'
+                        >
+                        </Form.Control>
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.nombre}
 
-                    <Form.Control
-                        type='password'
-                        placeholder='Enter your password'
-                        value={form.contraseña}
-                        onChange={(e) => setField('contraseña', e.target.value)}
-                        isInvalid={!!errors.contraseña}
-                        className='input'
-                    >
-                    </Form.Control>
-                    <Form.Control.Feedback type='invalid'>
-                        {errors.contraseña};
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group controlId='email'>
+                        <Form.Label className='words'>Email</Form.Label>
+                        <Form.Control
+                            type='email'
+                            placeholder='Enter email'
+                            value={form.email}
+                            onChange={(e) => setField('email', e.target.value)}
+                            isInvalid={!!errors.email}
+                            className='input'
+                        >
+                        </Form.Control>
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.email}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group controlId='contraseña' className='contraseña'>
+                        <Form.Label className='words'>contraseña</Form.Label>
 
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group controlId='contraseña2'>
-                    <Form.Label className='words'>Repeat contraseña</Form.Label>
-                    <Form.Control
-                        type='password'
-                        placeholder='Repeat your password'
-                        value={form.contraseña2}
-                        onChange={(e) => setField('contraseña2', e.target.value)}
-                        isInvalid={!!errors.contraseña2}
-                        className='input'
-                    >
-                    </Form.Control>
-                    <Form.Control.Feedback type='invalid'>
-                        {errors.contraseña2}
-                    </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group controlId='submit'>
-                    <Button className='Boton' type='submit'
-                        onClick={handleSubmit} >
-                        Submit
-                    </Button>
-                </Form.Group>
-            </Form>
-            <div className="coltext d-flex flex-column justify-content-center align-items-center colbotons">
-                <div className='botonhome d-flex justify-content-center align-items-center'>
-                    <a href='/'>HOME</a>
-                </div>
-                <div className='botonhome d-flex justify-content-center align-items-center'>
-                    <a href='/movil'>MOVIL</a>
-                </div>
+                        <Form.Control
+                            type='password'
+                            placeholder='Enter your password'
+                            value={form.contraseña}
+                            onChange={(e) => setField('contraseña', e.target.value)}
+                            isInvalid={!!errors.contraseña}
+                            className='input'
+                        >
+                        </Form.Control>
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.contraseña};
+
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group controlId='contraseña2'>
+                        <Form.Label className='words'>Repeat contraseña</Form.Label>
+                        <Form.Control
+                            type='password'
+                            placeholder='Repeat your password'
+                            value={form.contraseña2}
+                            onChange={(e) => setField('contraseña2', e.target.value)}
+                            isInvalid={!!errors.contraseña2}
+                            className='input'
+                        >
+                        </Form.Control>
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.contraseña2}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group controlId='submit'>
+                        <Button className='Boton' type='submit'
+                            onClick={handleSubmit} >
+                            Submit
+                        </Button>
+                    </Form.Group>
+                </Form>
             </div>
-        </div>
+        </>
     )
 }
 

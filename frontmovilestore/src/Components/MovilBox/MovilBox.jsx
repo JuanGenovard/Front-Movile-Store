@@ -1,18 +1,15 @@
-// import React from 'react';
-// import { Card } from 'antd';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import state from '../state';
+const MovilBox = ({movil}) => {
 
+    return (
+        <Link to={`/movil/${movil.id_movil}`}>
+            {movil.nombre}
+            {movil.color}
+            {movil.potencia}
+        </Link>
+    );
+};
 
-
-// const MovilBox = ({movil}) => {
-
-//     return (
-//         <Card hoverable style={{width: 240,height: 365,margin:10}}
-//         cover={<img alt="movil_poster" src={movil.url_img} />}
-//         onClick={() => state.setMovie(movil)}>
-//         </Card>
-//     );
-// };
-
-// export default MovilBox;
+export default MovilBox;

@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import MovilBox from '../../Components/MovilBox/MovilBox';
-import state from '../../state';
-import { observer } from "mobx-react-lite";
-import MovilDetail from './MovilDetails';
 import Header from '../../Components/Header/Header';
 
 
 const API_URL = "http://localhost:3001/movils/";
 const API_URL_SEARCH = "https://proyectobackendpeliculas-production.up.railway.app/movies/search/";
 
-export const Movil = observer(() => {
-
-  const [movil, setMovil] = useState([]);
+export default function () {
+  const [moviles, setMovil] = useState([]);
   const [search, setSearch] = useState(['']);
 
   const searchHandler = (e) => {
@@ -39,40 +35,31 @@ export const Movil = observer(() => {
 
   }, [search])
 
-  if (state.movil) {
-    return (
-      <MovilDetail
-        movil={state.movil} >
-      </MovilDetail>
-    )
-  } else {
-    return (
-      <>
-        <Header />
+  console.log(moviles)
 
-        <Container fluid className='containermovie'>
-          <Row className='d-flex justify-content-center align-items-center mt-1'>
-            <Col lg={6}>
-              <Form>
-                <Form.Control type='search' placeholder='Search' id='movieInput' onChange={(e) => searchHandler(e)}>
-                </Form.Control>
-              </Form>
-            </Col>
-          </Row>
-          <Row className='d-flex'>
-            {movil.map((movil) => {
-              return (
-                <Col xs={12} sm={5} md={4} lg={3}>
-                  <MovilBox key={movil.title} movil={movil} />
-                </Col>
-              )
-            })}
-          </Row>
-        </Container>
-      </>
-    )
-  }
+  return (
+    <div>
+      <Header />
+
+      <Container fluid className='containermovie'>
+        <Row className='d-flex justify-content-center align-items-center mt-1'>
+          <Col lg={6}>
+            <Form>
+              <Form.Control type='search' placeholder='Search' id='movieInput' onChange={(e) => searchHandler(e)}>
+              </Form.Control>
+            </Form>
+          </Col>
+        </Row>
+        <Row className='d-flex'>
+          {moviles.map((movil) => {
+            return (
+              <Col xs={12} sm={5} md={4} lg={3}>
+                <MovilBox key={movil.title} movil={movil} />
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
+    </div>
+  )
 }
-)
-
-export default Movil;

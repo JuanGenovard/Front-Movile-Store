@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 const MovilBox = ({movil}) => {
 
     return (
-        <Link to={`/movil/${movil.id_movil}`}>
-            {movil.nombre}
-            {movil.color}
-            {movil.potencia}
+        <Link className='card' to={`/movil/${movil.id_movil}`}>
+            <img src={movil.URL} alt="imagen" />
+            {movil.nombre}<br />
+            {movil.color}<br />
+            {movil.precio}
+            
         </Link>
     );
 };

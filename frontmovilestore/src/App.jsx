@@ -11,6 +11,8 @@ import Register from './Components/Register/Register';
 import Movil from './Containers/Movil/Movil';
 import SettingsUser from './Containers/SettingsContainer/SettingsContainer';
 import { UserProvider } from './UserProvider';
+import MovilDetail from './Containers/Movil/MovilDetails';
+import Header from './Components/Header/Header';
 
 
 
@@ -18,10 +20,12 @@ function App() {
     return(
         <UserProvider>
                 <BrowserRouter>
+                <Header />
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/register' element={<Register/>}/>
+                    <Route path='/movil/:id' element={<MovilDetail/>}/>
                     <Route path='/movil' element={<Movil/>}/>
                     <Route path ='/settings' element={<SettingsUser/>}/>
                 </Routes>

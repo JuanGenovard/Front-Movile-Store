@@ -4,7 +4,6 @@ import './Register.scss'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUserToggleContext } from "../../UserProvider";
-import Header from '../Header/Header';
 
 
 const Register = () => {
@@ -69,82 +68,79 @@ const Register = () => {
     }
 
     return (
-        <>
-            <Header />
-            <div className='contform'>
+        <div className='contform'>
 
-                <Form className='Principal1'>
-                    <Form.Group controlId='nombre'>
-                        <Form.Label className='words'>nombre</Form.Label>
-                        <Form.Control
-                            placeholder='Enter username'
-                            value={form.nombre}
-                            onChange={(e) => setField('nombre', e.target.value)}
-                            isInvalid={!!errors.nombre}
-                            className='input'
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.nombre}
+            <Form className='Principal1'>
+                <Form.Group controlId='nombre'>
+                    <Form.Label className='words'>nombre</Form.Label>
+                    <Form.Control
+                        placeholder='Enter username'
+                        value={form.nombre}
+                        onChange={(e) => setField('nombre', e.target.value)}
+                        isInvalid={!!errors.nombre}
+                        className='input'
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.nombre}
 
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group controlId='email'>
-                        <Form.Label className='words'>Email</Form.Label>
-                        <Form.Control
-                            type='email'
-                            placeholder='Enter email'
-                            value={form.email}
-                            onChange={(e) => setField('email', e.target.value)}
-                            isInvalid={!!errors.email}
-                            className='input'
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.email}
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group controlId='contraseña' className='contraseña'>
-                        <Form.Label className='words'>contraseña</Form.Label>
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group controlId='email'>
+                    <Form.Label className='words'>Email</Form.Label>
+                    <Form.Control
+                        type='email'
+                        placeholder='Enter email'
+                        value={form.email}
+                        onChange={(e) => setField('email', e.target.value)}
+                        isInvalid={!!errors.email}
+                        className='input'
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.email}
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group controlId='contraseña' className='contraseña'>
+                    <Form.Label className='words'>contraseña</Form.Label>
 
-                        <Form.Control
-                            type='password'
-                            placeholder='Enter your password'
-                            value={form.contraseña}
-                            onChange={(e) => setField('contraseña', e.target.value)}
-                            isInvalid={!!errors.contraseña}
-                            className='input'
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.contraseña};
+                    <Form.Control
+                        type='password'
+                        placeholder='Enter your password'
+                        value={form.contraseña}
+                        onChange={(e) => setField('contraseña', e.target.value)}
+                        isInvalid={!!errors.contraseña}
+                        className='input'
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.contraseña};
 
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group controlId='contraseña2'>
-                        <Form.Label className='words'>Repeat contraseña</Form.Label>
-                        <Form.Control
-                            type='password'
-                            placeholder='Repeat your password'
-                            value={form.contraseña2}
-                            onChange={(e) => setField('contraseña2', e.target.value)}
-                            isInvalid={!!errors.contraseña2}
-                            className='input'
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.contraseña2}
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group controlId='submit'>
-                        <Button className='Boton' type='submit'
-                            onClick={handleSubmit} >
-                            Submit
-                        </Button>
-                    </Form.Group>
-                </Form>
-            </div>
-        </>
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group controlId='contraseña2'>
+                    <Form.Label className='words'>Repeat contraseña</Form.Label>
+                    <Form.Control
+                        type='password'
+                        placeholder='Repeat your password'
+                        value={form.contraseña2}
+                        onChange={(e) => setField('contraseña2', e.target.value)}
+                        isInvalid={!!errors.contraseña2}
+                        className='input'
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.contraseña2}
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group controlId='submit'>
+                    <Button className='Boton' type='submit'
+                        onClick={handleSubmit} >
+                        Submit
+                    </Button>
+                </Form.Group>
+            </Form>
+        </div>
     )
 }
 

@@ -4,7 +4,6 @@ import { Form, Button } from 'react-bootstrap';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUserToggleContext } from "../../UserProvider";
-import Header from "../Header/Header";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -70,59 +69,56 @@ const Login = () => {
     }
 
     return (
-        <>
-            <Header />
-            <div className="contform">
-                <Form className="containerform">
-                    <Form.Group controlId='email'>
-                        <Form.Label className="words">Email</Form.Label>
-                        <Form.Control
-                            type="email"
-                            placeholder='Enter email'
-                            value={form.email}
-                            onChange={(e) => setField('email', e.target.value)}
-                            isInvalid={!!errors.email}
-                            className="input"
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.email}
+        <div className="contform">
+            <Form className="containerform">
+                <Form.Group controlId='email'>
+                    <Form.Label className="words">Email</Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder='Enter email'
+                        value={form.email}
+                        onChange={(e) => setField('email', e.target.value)}
+                        isInvalid={!!errors.email}
+                        className="input"
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.email}
 
-                        </Form.Control.Feedback>
-                    </Form.Group>
+                    </Form.Control.Feedback>
+                </Form.Group>
 
-                    <Form.Group controlId='password'>
-                        <Form.Label className="words">Password</Form.Label>
-                        <Form.Control
-                            type='password'
-                            placeholder='Enter your password'
-                            value={form.password}
-                            onChange={(e) => setField('password', e.target.value)}
-                            isInvalid={!!errors.password}
-                            className="input"
-                        >
-                        </Form.Control>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.password}
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group className="boxboton" controlId='submit'>
-                        <Button type='submit' className="Boton"
-                            onClick={handleSubmit} >
-                            Login
-                        </Button>
+                <Form.Group controlId='password'>
+                    <Form.Label className="words">Password</Form.Label>
+                    <Form.Control
+                        type='password'
+                        placeholder='Enter your password'
+                        value={form.password}
+                        onChange={(e) => setField('password', e.target.value)}
+                        isInvalid={!!errors.password}
+                        className="input"
+                    >
+                    </Form.Control>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.password}
+                    </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group className="boxboton" controlId='submit'>
+                    <Button type='submit' className="Boton"
+                        onClick={handleSubmit} >
+                        Login
+                    </Button>
 
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.noLogin}
-                        </Form.Control.Feedback>
-                        <p className="error">{errors.noLogin}</p>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Control.Feedback type='invalid'>
+                        {errors.noLogin}
+                    </Form.Control.Feedback>
+                    <p className="error">{errors.noLogin}</p>
 
-                    </Form.Group>
-                </Form>
-            </div>
-        </>
+                </Form.Group>
+            </Form>
+        </div>
     );
 }
 export default Login;

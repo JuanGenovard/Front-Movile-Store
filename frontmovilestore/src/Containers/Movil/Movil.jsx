@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import MovilBox from '../../Components/MovilBox/MovilBox';
-import Header from '../../Components/Header/Header';
 
 
 const API_URL = "http://localhost:3001/movils/";
@@ -38,28 +37,24 @@ export default function () {
   console.log(moviles)
 
   return (
-    <div>
-      <Header />
-
-      <Container fluid className='containermovie'>
-        <Row className='d-flex justify-content-center align-items-center mt-1'>
-          <Col lg={6}>
-            <Form>
-              <Form.Control type='search' placeholder='Search' id='movieInput' onChange={(e) => searchHandler(e)}>
-              </Form.Control>
-            </Form>
-          </Col>
-        </Row>
-        <Row className='d-flex'>
-          {moviles.map((movil) => {
-            return (
-              <Col xs={12} sm={5} md={4} lg={3}>
-                <MovilBox key={movil.title} movil={movil} />
-              </Col>
-            )
-          })}
-        </Row>
-      </Container>
-    </div>
+    <Container fluid className='containermovie'>
+      <Row className='d-flex justify-content-center align-items-center mt-1'>
+        <Col lg={6}>
+          <Form>
+            <Form.Control type='search' placeholder='Search' id='movieInput' onChange={(e) => searchHandler(e)}>
+            </Form.Control>
+          </Form>
+        </Col>
+      </Row>
+      <Row className='d-flex'>
+        {moviles.map((movil) => {
+          return (
+            <Col xs={12} sm={5} md={4} lg={3}>
+              <MovilBox key={movil.title} movil={movil} />
+            </Col>
+          )
+        })}
+      </Row>
+    </Container>
   )
 }

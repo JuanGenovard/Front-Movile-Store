@@ -1,57 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import state from '../../state';
 import axios from "axios";
 import { useState } from 'react'
+import { useParams } from "react-router-dom";
 
 
 // import './movilDetail.scss'
 
 
-const MovilDetail = ({ movil }) => {
-    const token=localStorage.getItem('jwt');
-    const [error,setError]=useState('');
+const MovilDetail = () => {
+    const { id } = useParams();
+    const token = localStorage.getItem('jwt');
 
+    const [movil, setMovil] = useState(null)
+    const [cargando, setCargando] = useState(true)
 
-   function createOrderHandler(){
-    const body={
-        title:movil.title,
-        type:"movil"
+    useEffect(() => {
+        axios.get(`http://localhost:3001/movils/${id}`).then(response => {
+            setMovil(response.data)
+            setCargando(false)
+        })
+    }, [])
+
+    if (cargando) {
+        return <div>Cargando</div>
     }
-    const config = {
-        headers: { Authorization: `Bearer ${token}` },
-      };
-      console.log("lol");
-        axios.post("https://proyectobackendpeliculas-production.up.railway.app/orders/create", body,config)
-        .then(response => {
-            console.log("wtf");
-            if (response.data.message=="You already have that item registered") {
-                setError(response.data.message);
-                console.log(error)
-            }else{
-                console.log("No error");
-            }
-            
-        }).catch(error => {
-            console.log(error);
-            setError(error);
-
-        });
-    }
-
 
     return (
-        <div>
-            <div onClick={() => state.resetMovil()}>
-                <h4 className="back">Back</h4>
-            </div>
-        <h1 className="texto">{movil.title}</h1>
-        <img src={movil.url_img} />
-        <p className="texto">{movil.synopsis}</p>
-        <h3>{error}</h3>
-        <button onClick={createOrderHandler}>Comprar</button>
-        </div>
+        movil ? <div>{movil.nombre}</div> : <div>No encontrado</div>
     );
-    }
+}
 
 
 

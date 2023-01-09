@@ -2,31 +2,27 @@
 //     background-color: rgb(50, 50, 50);
 // }
 .titulocol{
-    color: #EBECF0;
-    height: 15vh;
     font-size: 5vw;
+    margin-bottom: 10px;
 }
 .mobile{
     background-color: #EBECF0;
     color: black;
     border-radius: 10px;
 }
-.coltext{
-    height: 85vh;
+.store{
+    color: black;
 }
-// .colbotons{
-//     background-color: wheat;
-//     border: 1px solid black;
-//     border-radius: 20px;
+// .coltext{
+//     height: 85vh;
 // }
 .text{
     font-size: 3vw;
 }
 .divtext1{
     background-color: #EBECF0;
-    height: 80vh;
-    width: 40vw;
-    margin: 5vw;
+    height: 60vh;
+    width: 30vw;
     border-radius: 20px;
 }
 .divtext2{
@@ -48,10 +44,6 @@
 }
 
 .wordlogin{
-    text-decoration: none;
-    color: black;
-}
-.wordregister{
     text-decoration: none;
     color: black;
 }

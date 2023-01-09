@@ -56,7 +56,7 @@ const SettingsUser = () => {
     }
 
     return (
-        <div className='contform'>
+        <div className='contform m-0 p-0'>
             <Form className='Principal1'>
                 <Form.Group controlId='nombre'>
                     <Form.Label className='words'>Username</Form.Label>
@@ -110,14 +110,6 @@ const SettingsUser = () => {
                     </Button>
                 </Form.Group>
             </Form>
-            <div className="coltext d-flex flex-column justify-content-center align-items-center colbotons">
-                <div className='botonhome d-flex justify-content-center align-items-center'>
-                    <a href='/'>HOME</a>
-                </div>
-                <div className='botonhome d-flex justify-content-center align-items-center'>
-                    <a href='/movil'>MOVIL</a>
-                </div>
-            </div>
         </div>
 
 

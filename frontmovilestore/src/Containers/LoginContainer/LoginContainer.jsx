@@ -4,8 +4,10 @@ import './LoginContainer.scss'
 
 const LoginContainer = () =>{
     return (
-        <Row className='ContainerLogin'>
+        <Row className='m-0 p-0'>
+            <Col className='m-0 p-0'>
             <Login />
+            </Col>
         </Row>
     );
   }

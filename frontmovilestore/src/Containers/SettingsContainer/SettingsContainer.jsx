@@ -5,9 +5,9 @@ import './SettingsContainer.scss'
 
 const SettingsUser = () => {
   return (
-    <Container fluid className='Principal'>
-      <Row>
-        <Col xs={10} sm={8} md={6} lg={5}>
+    <Container fluid className='m-0 p-0'>
+      <Row className='m-0 p-0'>
+        <Col className='m-0 p-0'>
           <SettingsUserComponent />
         </Col>
       </Row>

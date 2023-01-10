@@ -11,6 +11,7 @@ function Header() {
                 <Link className='wordheader' to="/register">Resgister</Link>
                 <Link className='wordheader' to="/movil">Mobiles</Link>
                 <Link className='wordheader' to="/settings">Settings</Link>
+                {/* <Link className='wordheader' to="/compras"> Compras</Link> */}
             </div>
         </header>
     )

@@ -32,7 +32,7 @@ const MovilDetail = () => {
             {movil.nombre}<br />
             {movil.color}<br />
             {movil.precio}<br />
-            <Link>Comprar</Link>
+            <Link className='wordheader' to="/venta">Comprar</Link>
         </div> : <div>No encontrado</div>
         
     );

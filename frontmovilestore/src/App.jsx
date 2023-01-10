@@ -13,6 +13,8 @@ import SettingsUser from './Containers/SettingsContainer/SettingsContainer';
 import { UserProvider } from './UserProvider';
 import MovilDetail from './Containers/Movil/MovilDetails';
 import Header from './Components/Header/Header';
+import Compras from './Containers/Compras/Compras';
+import Venta from './Components/Venta/Venta';
 
 
 
@@ -27,7 +29,9 @@ function App() {
                     <Route path='/register' element={<Register/>}/>
                     <Route path='/movil/:id' element={<MovilDetail/>}/>
                     <Route path='/movil' element={<Movil/>}/>
+                    <Route path='/compras' element={<Compras/>}/>
                     <Route path ='/settings' element={<SettingsUser/>}/>
+                    <Route path='/venta' element={<Venta/>}/>
                 </Routes>
                 </BrowserRouter>
             </UserProvider>

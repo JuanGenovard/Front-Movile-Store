@@ -4,7 +4,7 @@ import MovilBox from '../../Components/MovilBox/MovilBox';
 
 
 const API_URL = "http://localhost:3001/movils/";
-const API_URL_SEARCH = "https://proyectobackendpeliculas-production.up.railway.app/movies/search/";
+const API_URL_SEARCH = "http://localhost:3001/movils/";
 
 export default function () {
   const [moviles, setMovil] = useState([]);
@@ -12,7 +12,6 @@ export default function () {
 
   const searchHandler = (e) => {
     setSearch(e.target.value);
-    console.log(search);
   }
 
   useEffect(() => {
@@ -20,24 +19,21 @@ export default function () {
       fetch(API_URL)
         .then((res) => res.json())
         .then(data => {
-          console.log(data);
           setMovil(data);
         })
     } else {
       fetch(API_URL_SEARCH + search)
         .then((res) => res.json())
         .then(data => {
-          console.log(data);
           setMovil(data);
         })
     }
 
   }, [search])
 
-  console.log(moviles)
 
   return (
-    <Container fluid className='containermovie'>
+    <Container>
       <Row className='d-flex justify-content-center align-items-center mt-1'>
         <Col lg={6}>
           <Form>

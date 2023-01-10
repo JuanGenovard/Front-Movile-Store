@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import state from '../../state';
 import axios from "axios";
 import { useState } from 'react'
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 
 // import './movilDetail.scss'
@@ -27,7 +27,14 @@ const MovilDetail = () => {
     }
 
     return (
-        movil ? <div>{movil.nombre}</div> : <div>No encontrado</div>
+        movil ? <div>
+            <img src={movil.URL} alt="imagen" /><br />
+            {movil.nombre}<br />
+            {movil.color}<br />
+            {movil.precio}<br />
+            <Link>Comprar</Link>
+        </div> : <div>No encontrado</div>
+        
     );
 }
 

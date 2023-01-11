@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Row } from 'react-bootstrap';
+import { Form, Button, } from 'react-bootstrap';
 import './SettingsUser.scss'
 import axios from "axios";
 
@@ -21,11 +21,10 @@ const SettingsUser = () => {
     }
 
     const validateForm = () => {
-        const { username, email, password, password2 } = form;
+        const { email, password, password2 } = form;
         const newErrors = {};
         if (password && !/[?=.*[0-9]]*/.test(password)) newErrors.password = 'Password must contain a number'
         if (password && !/[?=.*[a-z]]*/.test(password)) newErrors.password = 'Password must contain at least 1 lower case'
-        console.log(newErrors)
         if (password && !/[?=.*[A-Z]]*/.test(password)) newErrors.password = 'Password must contain at least 1 upper case'
         if (password && !/[[a-zA-Z0-9]{8,}]*/.test(password)) newErrors.password = 'Password must contain at least 8 characters'
 
@@ -41,12 +40,11 @@ const SettingsUser = () => {
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
         } else {
-            console.log("submited form")
             const token = localStorage.getItem("jwt");
             const config = {
                 headers: { Authorization: `Bearer ${token}` },
             };
-            axios.put("http://localhost:3001/auth/login", form, config)
+            axios.put("http://localhost:3001/usuarios/update/", form, config)
                 .then(response => {
                     console.log(response);
                 });
@@ -59,17 +57,17 @@ const SettingsUser = () => {
         <div className='contform m-0 p-0'>
             <Form className='Principal1'>
                 <Form.Group controlId='nombre'>
-                    <Form.Label className='words'>Username</Form.Label>
+                    <Form.Label className='words'>Email</Form.Label>
                     <Form.Control
-                        placeholder='Enter username'
-                        value={form.username}
-                        onChange={(e) => setField('username', e.target.value)}
-                        isInvalid={!!errors.nombre}
+                        placeholder='Enter email'
+                        value={form.email}
+                        onChange={(e) => setField('email', e.target.value)}
+                        isInvalid={!!errors.email}
                         className='input'
                     >
                     </Form.Control>
-                    <Form.Control.Feedback type='invalid'>
-                        {errors.nombre}
+                    <Form.Control.Feedback type='email'>
+                        {errors.email}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId='password'>

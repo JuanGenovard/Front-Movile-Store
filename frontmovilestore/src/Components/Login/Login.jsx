@@ -46,16 +46,16 @@ const Login = () => {
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
-            console.log(formErrors);
         }
         else {
             try {
-                console.log(form)
                 axios.post("http://localhost:3001/auth/login", form)
                     .then(response => {
                         console.log(response)
                         localStorage.setItem('jwt', response.data.jwt);
-                        changeLogin(response.data.username, response.data.admin);
+                        changeLogin(response.data.username, response.data.isAdmin);
+                        localStorage.setItem('isAdmin', response.data.isAdmin);
+                        localStorage.setItem('username', response.data.username);
                         navigate("/movil");
                     })
             }

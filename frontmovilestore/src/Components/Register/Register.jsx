@@ -35,14 +35,14 @@ const Register = () => {
         // if (!dob || dob === '') newErrors.dob = 'Please enter your date of birth'
         if (!contraseña || contraseña === 'Enter your contraseña') newErrors.contraseña = 'Please enter a contraseña'
         else {
-            if (!/[?=.*[0-9]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain a number'
-            if (!/[?=.*[a-z]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 1 lower case'
-            if (!/[?=.*[A-Z]]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 1 upper case'
+            if (!/[?=.*[0-9]]*/.test(contraseña)) newErrors.contraseña = 'password must contain a number'
+            if (!/[?=.*[a-z]]*/.test(contraseña)) newErrors.contraseña = 'password must contain at least 1 lower case'
+            if (!/[?=.*[A-Z]]*/.test(contraseña)) newErrors.contraseña = 'password must contain at least 1 upper case'
             if (!/[[a-zA-Z0-9]{8,}]*/.test(contraseña)) newErrors.contraseña = 'contraseña must contain at least 8 characters'
         }
 
-        if (!contraseña2 || contraseña2 === 'Repeat your contraseña') newErrors.contraseña2 = 'Please repeat your contraseña'
-        else if (contraseña2 !== contraseña) newErrors.contraseña2 = 'The contraseñas do not match'
+        if (!contraseña2 || contraseña2 === 'Repeat your password') newErrors.contraseña2 = 'Please repeat your password'
+        else if (contraseña2 !== contraseña) newErrors.contraseña2 = 'The password do not match'
 
         return newErrors;
     }
@@ -52,13 +52,9 @@ const Register = () => {
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
-            console.log(formErrors);
         } else {
-            console.log("submited form")
             e.preventDefault()
-            console.log(form);
             let registerbody = JSON.stringify(form)
-            console.log(registerbody)
             axios.post("http://localhost:3001/auth/nuevousuario", form)
                 .then(response => {
                     navigate("/login")

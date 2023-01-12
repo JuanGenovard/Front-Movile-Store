@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from 'react'
 import { useParams, Link, Navigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import './MovilDetails.scss'
 
 
 
@@ -50,12 +51,12 @@ const MovilDetail = () => {
     }
 
     return (
-        movil ? <div>
+        movil ? <div className="movildiv d-flex justify-content-center align-items-center">
             <img  className="movilbox" src={movil.URL} alt="imagen" /><br />
             {movil.nombre}<br />
             {movil.color}<br />
             {movil.precio}<br />
-            <Link className='wordheader' to="/venta" onClick={() => handleClick()}>Comprar</Link>
+            <Link className='divcomprar m-5 d-flex justify-content-center align-items-center' to="/venta" onClick={() => handleClick()}><h1> Comprar </h1></Link>
         </div> : <div>No encontrado</div>
         
     );

@@ -1,4 +1,13 @@
 .card{
     display: flex;
     flex-direction: column;
+    margin: 1em;
+    text-decoration: none;
+}
+
+.imagen{
+    height: 50vh;
+}
+.letras{
+    color: black;
 }

@@ -1,7 +1,21 @@
 .movilbox{
-    height: 20vh;
+    height: 50vh;
+    margin: 5em;
+
+}
+.movildiv{
+    margin-left: 5em;
+}
+.divcomprar{
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    height: 10vh;
     width: 10vw;
 }
-.wordheader{
-    border: 1px solid black;
+
+.divcomprar:hover{
+    background-color: black;
+    color: white;
 }

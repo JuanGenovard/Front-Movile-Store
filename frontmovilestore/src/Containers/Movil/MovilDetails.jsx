@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import state from '../../state';
 import axios from "axios";
 import { useState } from 'react'
 import { useParams, Link, Navigate } from "react-router-dom";
@@ -25,7 +24,10 @@ const MovilDetail = () => {
             emailUsuario: decoded.email,
             id_movil: id
         };
-        axios.post('http://localhost:3001/compras/nuevocompras', comprasbody)
+        const config = {
+            headers: { Authorization: `Bearer ${token}` },
+          };
+        axios.post('http://localhost:3001/compras/nuevocompras', comprasbody, config)
             .then(response => {
                 console.log(response.data);
             })
@@ -35,10 +37,12 @@ const MovilDetail = () => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/movils/${id}`).then(response => {
+        if(movil === null) {       
+             axios.get(`http://localhost:3001/movils/${id}`).then(response => {
             setMovil(response.data)
             setCargando(false)
-        })
+        })}
+
     }, [])
 
     if (cargando) {
@@ -51,7 +55,7 @@ const MovilDetail = () => {
             {movil.nombre}<br />
             {movil.color}<br />
             {movil.precio}<br />
-            <Link className='wordheader' to="/venta" onClick={handleClick()}>Comprar</Link>
+            <Link className='wordheader' to="/venta" onClick={() => handleClick()}>Comprar</Link>
         </div> : <div>No encontrado</div>
         
     );

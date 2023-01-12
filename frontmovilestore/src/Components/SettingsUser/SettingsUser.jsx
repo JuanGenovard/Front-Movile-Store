@@ -71,7 +71,7 @@ const SettingsUser = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId='password'>
-                    <Form.Label className='words'> New Password</Form.Label>
+                    <Form.Label className='words'> Nueva contraseña</Form.Label>
                     <Form.Control
                         type='password'
                         placeholder='Enter your password'
@@ -86,7 +86,7 @@ const SettingsUser = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId='contraseña2'>
-                    <Form.Label className='words'>Repeat New Password</Form.Label>
+                    <Form.Label className='words'>Repita la nueva contraseña</Form.Label>
                     <Form.Control
                         type='password'
                         placeholder='Repeat your password'

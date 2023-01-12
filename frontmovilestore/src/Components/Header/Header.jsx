@@ -19,15 +19,15 @@ function Header() {
                 {username
                     ? (
                         <>
-                            <Link className='wordheader' to="/movil">Mobiles</Link>
-                            <Link className='wordheader' to="/settings">Settings</Link>
-                            <button onClick={handleClick}>Logout</button>
+                            <Link className='wordheader' to="/movil">Moviles</Link>
+                            <Link className='wordheader' to="/settings">Opciones</Link>
+                            <button onClick={handleClick}>Cerrar Sesion</button>
                         </>
                     )
                     : (
                         <>
-                            <Link className='wordheader' to="/login">Login</Link>
-                            <Link className='wordheader' to="/register">Resgister</Link>
+                            <Link className='wordheader' to="/login">Iniciar Sesion</Link>
+                            <Link className='wordheader' to="/register">Registrarse</Link>
                         </>
                     )
                 }

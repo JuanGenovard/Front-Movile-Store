@@ -89,7 +89,7 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group controlId='password'>
-                    <Form.Label className="words">Password</Form.Label>
+                    <Form.Label className="words">Contraseña</Form.Label>
                     <Form.Control
                         type='password'
                         placeholder='Enter your password'

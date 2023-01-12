@@ -68,7 +68,7 @@ const Register = () => {
 
             <Form className='Principal1'>
                 <Form.Group controlId='nombre'>
-                    <Form.Label className='words'>nombre</Form.Label>
+                    <Form.Label className='words'>Nombre</Form.Label>
                     <Form.Control
                         placeholder='Enter username'
                         value={form.nombre}
@@ -98,7 +98,7 @@ const Register = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId='contraseña' className='contraseña'>
-                    <Form.Label className='words'>contraseña</Form.Label>
+                    <Form.Label className='words'>Contraseña</Form.Label>
 
                     <Form.Control
                         type='password'
@@ -115,7 +115,7 @@ const Register = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group controlId='contraseña2'>
-                    <Form.Label className='words'>Repeat contraseña</Form.Label>
+                    <Form.Label className='words'>Repita la contraseña</Form.Label>
                     <Form.Control
                         type='password'
                         placeholder='Repeat your password'

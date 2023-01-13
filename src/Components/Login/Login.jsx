@@ -51,7 +51,6 @@ const Login = () => {
             try {
                 axios.post("http://localhost:3001/auth/login", form)
                     .then(response => {
-                        console.log(response)
                         localStorage.setItem('jwt', response.data.jwt);
                         changeLogin(response.data.username, response.data.isAdmin);
                         localStorage.setItem('isAdmin', response.data.isAdmin);

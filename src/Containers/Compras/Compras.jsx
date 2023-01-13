@@ -8,9 +8,7 @@ const Compras = () => {
     const API_URL = "http://localhost:3001/compras/";
     const navigate = useNavigate()
     const token = localStorage.getItem("jwt");
-    console.log(token)
     const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
-    console.log(isAdmin)
     const config = {
         headers: { Authorization: `Bearer ${token}` },
       };
@@ -21,7 +19,6 @@ const Compras = () => {
             axios.get(API_URL, config)
                 .then((res) => {
                     setCompras(res.data);
-                    console.log(res.data)
                 })
         } else {
             navigate("/movil")

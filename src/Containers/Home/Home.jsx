@@ -24,10 +24,10 @@ function Home() {
         </Col>
         <Col sm={12} md={6} className="coltext d-flex flex-column justify-content-center align-items-center">
           <Col sm={12} md={6} className='divtext2 d-flex justify-content-center align-items-center'>
-            <Link className='wordlogin' to='/login'>LOGIN</Link>
+            <Link className='wordlogin' to='/login'> <h4>Iniciar Sesión</h4></Link>
           </Col>
           <div className='divtext2 d-flex justify-content-center align-items-center'>
-            <Link className='wordlogin' to='/register'>REGISTER</Link>
+            <Link className='wordlogin' to='/register'> <h4>Registrarse</h4></Link>
           </div>
         </Col>
       </Row>

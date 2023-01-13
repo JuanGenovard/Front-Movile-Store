@@ -39,7 +39,7 @@ $color-white: #FFF;
 }
 
 .Boton {
-    color:#61677C;
+    color:black;
     font-weight: bold;
     box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
     transition: all 0.2s ease-in-out;
@@ -48,12 +48,6 @@ $color-white: #FFF;
     margin: 10px;
 }
 
-
-.boxboton {
-    display: flex;
-    justify-content: center;
-
-}
 .botonhome{
     background-color: black;
     width: 5vw;

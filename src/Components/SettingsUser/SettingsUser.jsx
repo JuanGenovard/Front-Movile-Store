@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Form, Button, } from 'react-bootstrap';
 import './SettingsUser.scss'
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const SettingsUser = () => {
     const [form, setForm] = useState({});
     const [errors, setErrors] = useState({});
-    // axios.defaults.headers.put['Authorization'] = `Bearer ${localStorage.getItem('jwt').toString()}`;
     const setField = (field, value) => {
         setForm({
             ...form,
@@ -32,6 +32,7 @@ const SettingsUser = () => {
 
         return newErrors;
     }
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -46,11 +47,10 @@ const SettingsUser = () => {
             };
             axios.put("http://localhost:3001/usuarios/update/", form, config)
                 .then(response => {
-                    console.log(response);
+                    navigate('/')
                 });
         }
 
-        console.log(form);
     }
 
     return (

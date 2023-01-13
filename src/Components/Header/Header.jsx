@@ -21,12 +21,12 @@ function Header() {
                         <>
                             <Link className='wordheader' to="/movil">Moviles</Link>
                             <Link className='wordheader' to="/settings">Opciones</Link>
-                            <button onClick={handleClick}>Cerrar Sesion</button>
+                            <button onClick={handleClick}>Cerrar Sesión</button>
                         </>
                     )
                     : (
                         <>
-                            <Link className='wordheader' to="/login">Iniciar Sesion</Link>
+                            <Link className='wordheader' to="/login">Iniciar Sesión</Link>
                             <Link className='wordheader' to="/register">Registrarse</Link>
                         </>
                     )

@@ -70,7 +70,7 @@ const Register = () => {
                 <Form.Group controlId='nombre'>
                     <Form.Label className='words'>Nombre</Form.Label>
                     <Form.Control
-                        placeholder='Enter username'
+                        placeholder='Escriba su nombre'
                         value={form.nombre}
                         onChange={(e) => setField('nombre', e.target.value)}
                         isInvalid={!!errors.nombre}
@@ -86,7 +86,7 @@ const Register = () => {
                     <Form.Label className='words'>Email</Form.Label>
                     <Form.Control
                         type='email'
-                        placeholder='Enter email'
+                        placeholder='Insertar email'
                         value={form.email}
                         onChange={(e) => setField('email', e.target.value)}
                         isInvalid={!!errors.email}
@@ -102,7 +102,7 @@ const Register = () => {
 
                     <Form.Control
                         type='password'
-                        placeholder='Enter your password'
+                        placeholder='Inseratar contraseña'
                         value={form.contraseña}
                         onChange={(e) => setField('contraseña', e.target.value)}
                         isInvalid={!!errors.contraseña}
@@ -118,7 +118,7 @@ const Register = () => {
                     <Form.Label className='words'>Repita la contraseña</Form.Label>
                     <Form.Control
                         type='password'
-                        placeholder='Repeat your password'
+                        placeholder='Repita la contraseña'
                         value={form.contraseña2}
                         onChange={(e) => setField('contraseña2', e.target.value)}
                         isInvalid={!!errors.contraseña2}
@@ -132,7 +132,7 @@ const Register = () => {
                 <Form.Group controlId='submit'>
                     <Button className='Boton' type='submit'
                         onClick={handleSubmit} >
-                        Submit
+                        Enviar
                     </Button>
                 </Form.Group>
             </Form>

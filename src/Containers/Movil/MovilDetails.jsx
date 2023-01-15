@@ -25,7 +25,7 @@ const MovilDetail = () => {
         };
         const config = {
             headers: { Authorization: `Bearer ${token}` },
-          };
+        };
         axios.post('http://localhost:3001/compras/nuevocompras', comprasbody, config)
             .then(response => {
             })
@@ -34,11 +34,12 @@ const MovilDetail = () => {
     }
 
     useEffect(() => {
-        if(movil === null) {       
-             axios.get(`http://localhost:3001/movils/${id}`).then(response => {
-            setMovil(response.data)
-            setCargando(false)
-        })}
+        if (movil === null) {
+            axios.get(`http://localhost:3001/movils/${id}`).then(response => {
+                setMovil(response.data)
+                setCargando(false)
+            })
+        }
 
     }, [])
 
@@ -48,13 +49,17 @@ const MovilDetail = () => {
 
     return (
         movil ? <div className="movildiv d-flex justify-content-center align-items-center">
-            <img  className="movilbox" src={movil.URL} alt="imagen" /><br />
-            {movil.nombre}<br />
-            {movil.color}<br />
-            {movil.precio}<br />
-            <Link className='divcomprar m-5 d-flex justify-content-center align-items-center' to="/venta" onClick={() => handleClick()}><h1> Comprar </h1></Link>
+            <img className="movilbox" src={movil.URL} alt="imagen" /><br />
+            <div className="divinfo d-flex flex-column">
+            <div className="nombreinfo">{movil.nombre}</div><br />
+            <div className="nombreinfo">{movil.color}</div><br />
+            <div className="nombreinfo">{movil.precio}</div><br />
+            </div>
+            <Link className='divcomprar m-5 d-flex justify-content-center align-items-center' to="/venta" onClick={() => handleClick()}>
+                <h1> Comprar </h1>
+            </Link>
         </div> : <div>No encontrado</div>
-        
+
     );
 }
 

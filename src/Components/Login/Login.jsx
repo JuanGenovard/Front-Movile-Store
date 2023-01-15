@@ -74,7 +74,7 @@ const Login = () => {
                     <Form.Label className="words">Email</Form.Label>
                     <Form.Control
                         type="email"
-                        placeholder='Enter email'
+                        placeholder='Insertar email'
                         value={form.email}
                         onChange={(e) => setField('email', e.target.value)}
                         isInvalid={!!errors.email}
@@ -91,7 +91,7 @@ const Login = () => {
                     <Form.Label className="words">Contraseña</Form.Label>
                     <Form.Control
                         type='password'
-                        placeholder='Enter your password'
+                        placeholder='Insertar constraseña'
                         value={form.password}
                         onChange={(e) => setField('password', e.target.value)}
                         isInvalid={!!errors.password}
@@ -105,7 +105,7 @@ const Login = () => {
                 <Form.Group className="boxboton" controlId='submit'>
                     <Button type='submit' className="Boton"
                         onClick={handleSubmit} >
-                        Login
+                        Iniciar
                     </Button>
 
                 </Form.Group>

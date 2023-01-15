@@ -15,7 +15,7 @@ function Header() {
         <header className="header">
             <img src="https://thumbs.dreamstime.com/b/logotipo-de-tel%C3%A9fonos-m%C3%B3viles-conexi%C3%B3n-smartphone-como-icono-archivo-vectorial-incluido-176710275.jpg" alt="" height="70" />
             <div>
-                <Link className='wordheader' to="/">Home</Link>
+                <Link className='wordheader' to="/">Inicio</Link>
                 {username
                     ? (
                         <>

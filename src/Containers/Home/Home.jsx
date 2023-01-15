@@ -18,7 +18,7 @@ function Home() {
       </Row>
       <Row className="text-center">
           <Col sm={12} md={6} className='divtext1 d-flex justify-content-center align-items-center text'>
-            ¡Estás en MovileStore,<br />
+            ¡Estás en MobileStore,<br />
             la mejor web dedicada al<br />
             reacondicionado!
         </Col>
@@ -36,7 +36,7 @@ function Home() {
             <img className='imagenes' src={logo} alt="imagen" />
           </Col>
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
-            <h4> En nuestra MovilStore encontrarás<br />
+            <h4> En nuestra MobilStore encontrarás<br />
               una gran variedad de móviles de<br />
               alta gama a un precio increíble.</h4>
           </Col>
@@ -44,7 +44,7 @@ function Home() {
         <Row>
  
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
-            <h4> En nuestra MovilStore encontrarás<br />
+            <h4> En nuestra MobilStore encontrarás<br />
               una gran variedad de móviles de<br />
               alta gama a un precio increíble.</h4>
           </Col>

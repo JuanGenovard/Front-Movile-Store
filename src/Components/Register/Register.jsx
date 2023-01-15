@@ -55,7 +55,7 @@ const Register = () => {
         } else {
             e.preventDefault()
             let registerbody = JSON.stringify(form)
-            axios.post("http://localhost:3001/auth/nuevousuario", form)
+            axios.post("http://containers-us-west-65.railway.app/auth/nuevousuario", form)
                 .then(response => {
                     navigate("/login")
                 });

@@ -45,7 +45,7 @@ const SettingsUser = () => {
             const config = {
                 headers: { Authorization: `Bearer ${token}` },
             };
-            axios.put("http://localhost:3001/usuarios/update/", form, config)
+            axios.put("http://containers-us-west-65.railway.app/usuarios/update/", form, config)
                 .then(response => {
                     navigate('/')
                 });

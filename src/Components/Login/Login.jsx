@@ -49,7 +49,7 @@ const Login = () => {
         }
         else {
             try {
-                axios.post("http://containers-us-west-65.railway.app/auth/login", form)
+                axios.post("https://proyectofinal-production-63cf.up.railway.app/auth/login", form)
                     .then(response => {
                         localStorage.setItem('jwt', response.data.jwt);
                         changeLogin(response.data.username, response.data.isAdmin);

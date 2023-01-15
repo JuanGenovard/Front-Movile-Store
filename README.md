@@ -27,6 +27,9 @@ https://main.d84bex5i28nac.amplifyapp.com/
 
 Lo primero que encontramos en nuestra aplicación es la página Home con un Header que estará presente en toda la aplicación.
  En el contenedor principal de Home hay una breve descripción de nuestra web con los botones 'Iniciar sesión' y 'Registrarse' seguido de una serie de imágenes y textos.
+ 
+ ![Screenshot_1](https://user-images.githubusercontent.com/114061110/212537320-faef882c-bf8e-4100-bbab-18feceb71066.png)
+
 
  Al pulsar Iniciar sesión entraremos en la vista de 'login' donde hay dos 'inputs' en los que podremos escribir nuestro email y contraseña.
 

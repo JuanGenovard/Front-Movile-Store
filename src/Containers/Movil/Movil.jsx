@@ -34,14 +34,6 @@ export default function () {
 
   return (
     <Container>
-      <Row className='d-flex justify-content-center align-items-center mt-1'>
-        <Col lg={6}>
-          <Form>
-            <Form.Control type='search' placeholder='Search' id='movieInput' onChange={(e) => searchHandler(e)}>
-            </Form.Control>
-          </Form>
-        </Col>
-      </Row>
       <Row className='d-flex'>
         {moviles.map((movil) => {
           return (

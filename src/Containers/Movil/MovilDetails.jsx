@@ -48,7 +48,11 @@ const MovilDetail = () => {
 
     useEffect(() => {
         if (movil === null) {
-            axios.get(`https://proyectofinal-production-63cf.up.railway.app/movils/${id}`).then(response => {
+            axios.get(`https://proyectofinal-production-63cf.up.railway.app/movils/${id}`, {
+                headers: {
+                  Authorization: `Bearer ${token}`
+                }
+              }).then(response => {
                 setMovil(response.data)
                 setCargando(false)
             })

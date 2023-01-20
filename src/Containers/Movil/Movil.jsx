@@ -16,13 +16,21 @@ export default function () {
 
   useEffect(() => {
     if (search == '') {
-      fetch(API_URL)
+      fetch(API_URL, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('jwt')}`
+        }
+      })
         .then((res) => res.json())
         .then(data => {
           setMovil(data);
         })
     } else {
-      fetch(API_URL_SEARCH + search)
+      fetch(API_URL_SEARCH + search, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('jwt')}`
+        }
+      })
         .then((res) => res.json())
         .then(data => {
           setMovil(data);

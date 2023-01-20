@@ -68,7 +68,7 @@ const MovilDetail = () => {
                 <div className="nombreinfo">{movil.color}</div><br />
                 <div className="nombreinfo">{movil.precio}</div><br />
                 </div>
-                <Link className='divcomprar m-5 d-flex justify-content-center align-items-center' to="/venta" onClick={() => deleteClick()}>
+                <Link className='divcomprar m-5 d-flex justify-content-center align-items-center' to="/movil" onClick={() => deleteClick()}>
                     <h1> Eliminar </h1>
                 </Link>
             </div> : <div>No encontrado</div>

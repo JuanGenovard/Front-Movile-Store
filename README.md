@@ -12,6 +12,12 @@ Para arrancar este proyecto escribiremos el siguiente comando por consola:
 
 ### `npm start`
 
+# Administrador
+
+email: Bernat@gmail.com 
+
+contraseña: Bernat123456 
+
 ### Autor
 
 - [@Juan Genovard](https://github.com/JuanGenovard)

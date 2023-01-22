@@ -12,11 +12,6 @@ Para arrancar este proyecto escribiremos el siguiente comando por consola:
 
 ### `npm start`
 
-# Administrador
-
-email: Bernat@gmail.com 
-
-contraseña: Bernat123456 
 
 ### Autor
 
@@ -27,6 +22,13 @@ contraseña: Bernat123456
 El proyecto está publicado en la siguiente URL:
 
 https://main.d84bex5i28nac.amplifyapp.com/
+
+
+# Administrador
+
+email: Bernat@gmail.com 
+
+contraseña: Bernat123456
 
 
 ## Documentación

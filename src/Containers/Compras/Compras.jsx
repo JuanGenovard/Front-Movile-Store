@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useJwt } from "react-jwt";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import MovilBox from '../../Components/MovilBox/MovilBox';
+import { Container, Row, Col, } from 'react-bootstrap';
 
 
 const Compras = () => {

@@ -5,7 +5,7 @@ import './LoginContainer.scss'
 const LoginContainer = () =>{
     return (
         <Row className='m-0 p-0'>
-            <Col className='m-0 p-0'>
+            <Col xs={10} sm={8} md={6} lg={5} className='m-0 p-0'>
             <Login />
             </Col>
         </Row>

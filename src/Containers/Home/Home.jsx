@@ -33,7 +33,7 @@ function Home() {
       </Row>
         <Row>
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
-            <img className='imagenes' src={logo} alt="imagen" />
+            <img className='imagenes' src={logo3} alt="imagen" />
           </Col>
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
             <h4> En nuestra MobilStore encontrarás<br />
@@ -44,12 +44,12 @@ function Home() {
         <Row>
  
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
-            <h4> En nuestra MobilStore encontrarás<br />
-              una gran variedad de móviles de<br />
-              alta gama a un precio increíble.</h4>
+            <h4> Cómprate un móvil reacondicionado<br />
+               al mejor precio y al mismo tiempo <br />
+               cuida el medio ambiente.</h4>
           </Col>
           <Col sm={12} md={6}  className='d-flex justify-content-center align-items-center'>
-            <img className='imagenes' src={logo2} alt="imagen" />
+            <img className='imagenes' src={logo3} alt="imagen" />
           </Col>
         </Row>
         <Row>

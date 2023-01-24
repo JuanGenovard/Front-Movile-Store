@@ -4,7 +4,7 @@ import './LoginContainer.scss'
 
 const LoginContainer = () =>{
     return (
-        <Row className='containerLogin'>
+        <Row className='containerLogin container-fluid'>
             <Col xs={10} sm={8} md={6} lg={5}>
             <Login />
             </Col>

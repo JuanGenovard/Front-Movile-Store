@@ -68,7 +68,7 @@ const Login = () => {
     }
 
     return (
-        <div className="contform container-fluid m-0">
+        <div className="contform">
             <Form className="containerform">
                 <Form.Group controlId='email'>
                     <Form.Label className="words">Email</Form.Label>

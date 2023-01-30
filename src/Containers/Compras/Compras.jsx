@@ -32,7 +32,7 @@ const Compras = () => {
                     {compra.emailUsuario}<br />
                     {compra.createdAt}<br />
                     {compra.id_compra}<br />
-                    <img src={compra.movil.URL}/>
+                    {/* <img src={compra.movil.URL}/> */}
                 </td>
             )}
         </tr>

@@ -11,7 +11,7 @@ const Compras = () => {
     const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
     const config = {
         headers: { Authorization: `Bearer ${token}` },
-      };
+    };
     const [compras, setCompras] = useState([]);
 
     useEffect(() => {
@@ -26,17 +26,19 @@ const Compras = () => {
     }, [])
 
     return (
-        <div className='tabla'>
-        <tr>
-            {compras.map((compra) =>
-                <td>
-                    {compra.emailUsuario}<br />
-                    {compra.createdAt}<br />
-                    {compra.id_compra}<br />
-                </td>
-            )}
-        </tr>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    {compras.map((compra) =>
+                        <td>
+                            {compra.emailUsuario}<br />
+                            {compra.createdAt}<br />
+                            {compra.id_compra}<br />
+                        </td>
+                    )}
+                </tr>
+            </thead>
+        </table>
     )
 }
 

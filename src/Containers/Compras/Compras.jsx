@@ -26,16 +26,16 @@ const Compras = () => {
     }, [])
 
     return (
-        <div>
+        <tr>
             {compras.map((compra) =>
-                <div>
+                <td>
                     {compra.emailUsuario}<br />
                     {compra.createdAt}<br />
                     {compra.id_compra}<br />
                     <img src={compra.movil.URL}/>
-                </div>
+                </td>
             )}
-        </div>
+        </tr>
     )
 }
 

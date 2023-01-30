@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUserToggleContext } from "../../UserProvider";
 
+/* A function that is used to login. */
 const Login = () => {
     const navigate = useNavigate();
     const [form, setForm] = useState({
@@ -12,6 +13,11 @@ const Login = () => {
         password: ''
     });
     const [errors, setErrors] = useState({});
+ /* A function that is used to set the value of the field. */
+ /* A function that is used to set the value of the field. */
+/**
+ * If the field has an error, set the error to null.
+ */
     const setField = (field, value) => {
         setForm({
             ...form,
@@ -40,6 +46,7 @@ const Login = () => {
     }
     const changeLogin = useUserToggleContext();
 
+/* Preventing the default action of the form. */
     const handleSubmit = (e) => {
         e.preventDefault()
         const newErrors = {};
@@ -52,6 +59,7 @@ const Login = () => {
                 axios.post("https://proyectofinal-production-63cf.up.railway.app/auth/login", form)
                     .then(response => {
                         localStorage.setItem('jwt', response.data.jwt);
+                      /* Calling the function that is passed to the context provider. */
                         changeLogin(response.data.username, response.data.isAdmin);
                         localStorage.setItem('isAdmin', response.data.isAdmin);
                         localStorage.setItem('username', response.data.username);

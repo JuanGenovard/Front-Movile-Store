@@ -26,7 +26,7 @@ const Compras = () => {
     }, [])
 
     return (
-        <table>
+        <table className='tabla'>
             <thead>
                 <tr>
                     {compras.map((compra) =>

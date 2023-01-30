@@ -26,7 +26,7 @@ const Compras = () => {
     }, [])
 
     return (
-        <tr>
+        <tr className='tabla'>
             {compras.map((compra) =>
                 <td>
                     {compra.emailUsuario}<br />

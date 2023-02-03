@@ -26,29 +26,39 @@ const Compras = () => {
     }, [])
 
     return (
-        <table className='table'>
-            <thead>
-                <tr>
-                    <th>gmail</th>
-                    <th>fecha</th>
-                    <th>id</th>
-                </tr>
-                {compras.map((compra) =>
-                    <tr>
-                        <td>
-                            {compra.emailUsuario}<br />
-                            </td>
-                            <td>
-                            {compra.createdAt}<br />
-                            </td>
-                            <td>
-                            {compra.id_compra}<br />
-                        </td>
-                    </tr>
-                )}
+        <div>
+            <div>
+                <br />
+                
+                <table className='table d-flex justify-content-center align-items-center'>
+                    <thead>
+                    <h3>Compras realizadas</h3><br />
+                        <tr>
+                            <th width="100">id</th>
+                            <th width="200">gmail</th>
+                            <th width="100">fecha</th>
 
-            </thead>
-        </table>
+                        </tr>
+                        {compras.map((compra) =>
+                            <tr>
+                                <td>
+                                    {compra.id_compra}
+
+                                </td>
+                                <td>
+                                    {compra.emailUsuario}
+
+                                </td>
+                                <td>
+                                    {compra.createdAt}
+                                </td>
+                            </tr>
+                        )}
+
+                    </thead>
+                </table>
+            </div>
+        </div>
     )
 }
 

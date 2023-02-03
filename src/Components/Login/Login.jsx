@@ -56,7 +56,7 @@ const Login = () => {
         }
         else {
             try {
-                axios.post("http://localhost:3001/auth/login", form)
+                axios.post("https://proyectofinal-production-63cf.up.railway.app/auth/login", form)
                     .then(response => {
                         localStorage.setItem('jwt', response.data.jwt);
                       /* Calling the function that is passed to the context provider. */

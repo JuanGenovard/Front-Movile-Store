@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Compras = () => {
-    const API_URL = "https://proyectofinal-production-63cf.up.railway.app/compras/";
+    const API_URL = "http://localhost:3001/compras/";
     const navigate = useNavigate()
     const token = localStorage.getItem("jwt");
     const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
@@ -29,14 +29,24 @@ const Compras = () => {
         <table className='table'>
             <thead>
                 <tr>
-                    {compras.map((compra) =>
+                    <th>gmail</th>
+                    <th>fecha</th>
+                    <th>id</th>
+                </tr>
+                {compras.map((compra) =>
+                    <tr>
                         <td>
                             {compra.emailUsuario}<br />
+                            </td>
+                            <td>
                             {compra.createdAt}<br />
+                            </td>
+                            <td>
                             {compra.id_compra}<br />
                         </td>
-                    )}
-                </tr>
+                    </tr>
+                )}
+
             </thead>
         </table>
     )

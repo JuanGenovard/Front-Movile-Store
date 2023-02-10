@@ -3,6 +3,9 @@ import logo from '../../Resouces/mobile-phone-gac1d22344_640.jpg'
 import './Home.scss'
 import logo2 from '../../Resouces/miniature-g383ed1876_640.jpg'
 import logo3 from '../../Resouces/smartphone-g553f5a3c3_640.jpg'
+import logo4 from '../../Resouces/camara-moviles.jpg'
+import logo5 from '../../Resouces/368828.jpg'
+import logo6 from '../../Resouces/nokia-moviles-k3TB--1248x698@abc.jpg'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel';
@@ -63,7 +66,7 @@ function Home() {
         </Col>
         <Col  className='coltextimg'>
           <div className='imagentexto d-flex justify-content-center align-items-center'>
-          <img src={logo2} alt="first slice" />
+          <img className='imagenes' src={logo4} alt="first slice" />
           </div>
         </Col>
       </Row>
@@ -71,7 +74,7 @@ function Home() {
 
         <Col  className='coltextimg'>
           <div className='imagentexto d-flex justify-content-center align-items-center'>
-          <img src={logo2} alt="first slice" />
+          <img className='imagenes' src={logo5} alt="first slice" />
           </div>
         </Col>
         <Col className='coltextimg'>
@@ -96,7 +99,7 @@ function Home() {
         </Col>
         <Col className='coltextimg'>
           <div className='imagentexto d-flex justify-content-center align-items-center'>
-          <img src={logo2} alt="first slice" />
+          <img className='imagenes' src={logo6} alt="first slice" />
           </div>
         </Col>
       </Row>

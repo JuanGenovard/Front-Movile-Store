@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap'
 import './Header.scss'
 function Header() {
     const navigate = useNavigate()
@@ -12,8 +13,15 @@ function Header() {
     }
 
     return (
-        <header className="header">
-            <img src="https://thumbs.dreamstime.com/b/logotipo-de-tel%C3%A9fonos-m%C3%B3viles-conexi%C3%B3n-smartphone-como-icono-archivo-vectorial-incluido-176710275.jpg" alt="" height="70" />
+        <Container fluid>
+        <Row>
+            <Col xs={24} md= {12}>
+            <header className="header">
+            <div className='divlogo d-flex justify-content-center align-items-center'>
+            <p className='wordlogo'>
+                MobileStore
+            </p>
+            </div>
             <div>
                 <Link className='wordheader' to="/">Inicio</Link>
                 {username
@@ -41,6 +49,10 @@ function Header() {
 
             </div>
         </header>
+            </Col>
+        </Row>
+        </Container>
+
     )
 }
 

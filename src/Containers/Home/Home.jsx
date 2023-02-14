@@ -19,7 +19,7 @@ function Home() {
     <Container fluid className='conthome'>
       <Row>
         <Col xs={24} md={12} className='coltextimg'>
-          <div className='divtext d-flex justify-content-center align-items-center'>
+          <div className='divtext m-2 d-flex justify-content-center align-items-center'>
             <h3 className='ptext'>
               ¿En busca de un movil?
             </h3>
@@ -62,6 +62,7 @@ function Home() {
           </div>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col className='coltextimg'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>
@@ -78,6 +79,7 @@ function Home() {
           </div>
         </Col>
       </Row>
+      <hr />
       <Row>
 
         <Col  className='coltextimg'>
@@ -95,6 +97,7 @@ function Home() {
           </div>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col className='coltextimg'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>

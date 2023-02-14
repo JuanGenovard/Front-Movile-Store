@@ -99,9 +99,10 @@ function Home() {
         <Col className='coltextimg'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>
             <p>
-              ¿Te preocupa nuestro planeta? Entonces estas <br />
-              en la página adecuada para comprar un dispositivo<br />
-              respetuoso con el medio ambiente.
+            Aparte de un gran servicio técnico a tu disposición.<br />
+             Si le pasa algo a tu dispositivo,<br />
+             no dudes en contactar con nosotros, <br />
+             tenemos una garantía de un año por cualquier problema de sistema.
             </p>
           </div>
         </Col>
@@ -125,8 +126,9 @@ function Home() {
       </Row>
       <Row>
         <Col className='colfooter d-flex justify-content-center align-items-center'>
-        <div className="divfooter d-flex justify-content-center align-items-center">
-          <p>hola</p>
+        <div className="divfooter d-flex m-2 flex-column justify-content-center align-items-center">
+          <p className='m-1'>Telefono: *********</p>
+          <p>Email: ******@****.com</p>
         </div>
         </Col>
       </Row>

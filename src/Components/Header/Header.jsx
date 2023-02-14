@@ -17,11 +17,9 @@ function Header() {
         <Row>
             <Col xs={24} md= {12}>
             <header className="header">
-            <div className='divlogo d-flex justify-content-center align-items-center'>
             <p className='wordlogo'>
                 MobileStore
             </p>
-            </div>
             <div>
                 <Link className='wordheader' to="/">Inicio</Link>
                 {username

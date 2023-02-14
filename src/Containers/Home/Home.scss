@@ -6,14 +6,14 @@
 .imghome{
     border-radius: 1em;
     margin: 1vh;
-    box-shadow: 18px 18px 10px  wheat;
 }
 .divtext{
-    width: 40vw;
+    background-color: whitesmoke;
+    width: 97vw;
     height: 20vh;
+    border-radius: 1em;
 }
 .ptext{
-    color: white;
     margin-top: 1vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -24,14 +24,34 @@
     border: 1px solid white;
     border-radius: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 .imagentexto{
     margin-top: 3em;
+    margin-bottom: 1em;
 }
 .coltextimg{
     background-color: black;
-} .imagenes{
+} 
+.imagenes{
     width: 40vw;
     height: 40vh;
+}
+.footer{
+    background-color: whitesmoke;
+}
+.divlogo{
+    background-color: whitesmoke;
+    height:5vh;
+    width: 2vw;
+}
+.divfooter{
+    background-color: whitesmoke;
+    width: 97vw;
+    height: 10vh;
+    border-radius: 2em;
+    border: black solid 1px;
+}
+.colfooter{
+    background-color: black;
 }

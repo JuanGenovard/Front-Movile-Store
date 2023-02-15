@@ -1,18 +1,17 @@
 $ruler: 16px;
 $color-red: #AE1100;
-$color-bg: #EBECF0;
 $color-shadow: #BABECC;
 $color-white: #FFF;
 
 .contform{
-    background-color:$color-bg;
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 85vh;
 }
 .containerform {
-    background-color:$color-bg;
+
     width: 30vw;
 }
 

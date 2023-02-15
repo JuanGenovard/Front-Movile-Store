@@ -1,38 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Julee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Dancing+Script&family=Julee&family=Satisfy&display=swap');
 
 .conthome{
     height: 80vh;
 
+}
+.divcarousel{
+    background-color: black;
 }
 .imghome{
     border-radius: 1em;
     margin: 1vh;
 }
 .divtext{
-    background-color: whitesmoke;
-    width: 97vw;
+    color: white;
+    background-color: black;
     height: 20vh;
-    border-radius: 1em;
 }
 .ptext{
-    margin-top: 1vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-size: 8vh;
 
 }
 .textoimagen{
+    width: 45vw;
     margin-top: 3em;
-    color: rgb(15, 98, 146);
-    border: 1px solid white;
-    border-radius: 1em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    border: 1px solid black;
+    font-family: 'Comfortaa', cursive;
     font-size: 2vh;
 }
 .imagentexto{
     margin-top: 3em;
     margin-bottom: 1em;
 }
-.coltextimg{
-    background-color: black;
-} 
 .imagenes{
     width: 40vw;
     height: 40vh;
@@ -46,12 +47,8 @@
     width: 2vw;
 }
 .divfooter{
-    background-color: whitesmoke;
+    color: white;
+    background-color: black;
     width: 97vw;
     height: 10vh;
-    border-radius: 1em;
-    border: black solid 1px;
-}
-.colfooter{
-    background-color: black;
 }

@@ -8,7 +8,6 @@ import logo5 from '../../Resouces/368828.jpg'
 import logo6 from '../../Resouces/nokia-moviles-k3TB--1248x698@abc.jpg'
 import logo7 from '../../Resouces/instagram-g9499f7452_640.jpg'
 import logo8 from '../../Resouces/logo-facebook.png'
-import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +26,7 @@ function Home() {
         </Col>
       </Row>
       <Row>
-        <Col xs={24} md={12} className='coltextimg'>
+        <Col xs={24} md={12}>
           <div className="divcarousel">
 
             <Carousel>
@@ -64,7 +63,7 @@ function Home() {
       </Row>
       <hr />
       <Row>
-        <Col className='coltextimg'>
+        <Col className='d-flex justify-content-center align-items-center'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>
             <p>
             ¿Estás buscando un móvil de alta gama pero al mejor precio?<br />
@@ -73,7 +72,7 @@ function Home() {
             </p>
           </div>
         </Col>
-        <Col  className='coltextimg'>
+        <Col className='d-flex justify-content-center align-items-center'>
           <div className='imagentexto d-flex justify-content-center align-items-center'>
           <img className='imagenes' src={logo4} alt="first slice" />
           </div>
@@ -82,12 +81,12 @@ function Home() {
       <hr />
       <Row>
 
-        <Col  className='coltextimg'>
+        <Col>
           <div className='imagentexto d-flex justify-content-center align-items-center'>
           <img className='imagenes' src={logo5} alt="first slice" />
           </div>
         </Col>
-        <Col className='coltextimg'>
+        <Col className='d-flex justify-content-center align-items-center'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>
             <p>
               ¿Te preocupa nuestro planeta? Entonces estas <br />
@@ -99,7 +98,7 @@ function Home() {
       </Row>
       <hr />
       <Row>
-        <Col className='coltextimg'>
+        <Col className='d-flex justify-content-center align-items-center'>
           <div className='textoimagen d-flex justify-content-center align-items-center'>
             <p>
             Aparte de un gran servicio técnico a tu disposición.<br />
@@ -115,6 +114,7 @@ function Home() {
           </div>
         </Col>
       </Row>
+      <hr />
       <Row>
         <Col className='colfooter d-flex justify-content-center align-items-center'>
           <div className="divfooter d-flex justify-content-center align-items-center">

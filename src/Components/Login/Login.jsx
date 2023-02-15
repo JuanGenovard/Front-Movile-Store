@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useUserToggleContext } from "../../UserProvider";
+import { Container, Row, Col } from 'react-bootstrap'
 
 /* A function that is used to login. */
 const Login = () => {
@@ -77,7 +78,9 @@ const Login = () => {
 
     return (
         <div className="contform">
-            <Form className="containerform">
+            <Row>
+                <Col xs={24} md={12}>
+                <Form className="containerform">
                 <Form.Group controlId='email'>
                     <Form.Label className="words">Email</Form.Label>
                     <Form.Control
@@ -125,6 +128,9 @@ const Login = () => {
 
                 </Form.Group>
             </Form>
+                </Col>
+            </Row>
+
         </div>
     );
 }

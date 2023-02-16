@@ -1,9 +1,13 @@
 .movilbox{
+    border: solid 2px black;
     height: 50vh;
     margin: 5em;
 
 }
 .movildiv{
+    background-color: rgb(240, 160, 75);
+    width: 90vw;
+    height: 90vh;
     margin-left: 5em;
 }
 .divcomprar{
@@ -19,7 +23,17 @@
     background-color: black;
     color: white;
 }
+.nombremvl{
+    font-size: 3vh;
+}
 .nombreinfo{
     font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.divtext5{
+    border: solid black 2px;
+}
+.text5{
+    margin: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Dancing+Script&family=Julee&family=Satisfy&family=Source+Code+Pro:ital@1&display=swap');
+
+
+// .divmvlbox{
+//     background-color: rgb(24, 58, 29);
+// }
 .card{
+    background-color: rgb(240, 160, 75);
     display: flex;
     flex-direction: column;
     margin: 1em;
@@ -8,6 +15,12 @@
 .imagen{
     height: 50vh;
 }
-.letras{
+.nombremvl{
+    color: rgb(24, 58, 29);
+    font-size: 2em;
+    font-family:'Comfortaa', cursive;;
+}
+.nominfo{
     color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

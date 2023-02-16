@@ -17,7 +17,7 @@ function Home() {
   return (
     <Container fluid className='conthome'>
       <Row>
-        <Col xs={24} md={12} className='coltextimg'>
+        <Col xs={12} md={24} className='coltextimg'>
           <div className='divtext m-2 d-flex justify-content-center align-items-center'>
             <h3 className='ptext'>
               ¿En busca de un movil?
@@ -26,7 +26,7 @@ function Home() {
         </Col>
       </Row>
       <Row>
-        <Col xs={24} md={12}>
+        <Col xs={12} md={24}>
           <div className="divcarousel">
 
             <Carousel>

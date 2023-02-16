@@ -15,7 +15,10 @@ const MovilBox = ({ movil }) => {
                         <div className='d-flex flex-column justify-content-center align-items-center'>
                             <p className='nombremvl'>{movil.nombre}</p>
                             <p className='nominfo'>{movil.color}</p>
-                            <p className='nominfo'>{movil.precio}</p>
+                            <div className='divprecio d-flex justify-content-center align-items-center'>
+                            <p className='nominfo m-2'>{movil.precio}</p>
+                            </div>
+                            
                         </div>
 
                     </Link>
